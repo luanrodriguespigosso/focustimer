@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-body: #121214;
+  --bg-hover: #42d3ff;
+  --default: #ffffff;
+  --ff-content: "Roboto", sans-serif;
+  font-size: 62.5%;
+  font-size: 1.6rem;
+}
+
+body {
+  background-color: var(--bg-body);
+  font-family: var(--ff-content);
+  color: var(--default);
+}
