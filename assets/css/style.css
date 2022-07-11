@@ -7,14 +7,62 @@
 :root {
   --bg-body: #121214;
   --bg-hover: #42d3ff;
+  --bg-timer: hsla(194, 100%, 63%, 0.13);
   --default: #ffffff;
   --ff-content: "Roboto", sans-serif;
   font-size: 62.5%;
-  font-size: 1.6rem;
+}
+
+img {
+  width: 6.4rem;
+  height: 6.4rem;
 }
 
 body {
   background-color: var(--bg-body);
   font-family: var(--ff-content);
   color: var(--default);
+  font-size: 1.6rem;
+}
+
+main {
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+main #sound {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+}
+
+.container {
+  width: 22.8rem;
+  height: 22.8rem;
+}
+
+.timer {
+  margin-bottom: 1.6rem;
+}
+
+h1 {
+  font-size: 8.8rem;
+  line-height: 10.3rem;
+}
+
+.controller {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  background-color: var(--bg-timer);
+
+  padding: 2.2rem 4rem;
+  border-radius: 9999px;
 }
