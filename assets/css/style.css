@@ -6,11 +6,22 @@
 
 :root {
   --bg-body: #121214;
-  --bg-hover: #42d3ff;
-  --bg-timer: hsla(194, 100%, 63%, 0.13);
-  --default: #ffffff;
+  --default-btn: 20;
+  --bnt-primary: hsl(var(--default-btn), 100%, 63%);
+  --bg-controls: hsla(var(--default-btn), 100%, 63%, 0.13);
+  --text: #ffffff;
   --ff-content: "Roboto", sans-serif;
   font-size: 62.5%;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
 }
 
 img {
@@ -21,48 +32,41 @@ img {
 body {
   background-color: var(--bg-body);
   font-family: var(--ff-content);
-  color: var(--default);
-  font-size: 1.6rem;
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 main {
-  width: 100vh;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
 }
 
-main #sound {
-  position: absolute;
-  bottom: 4rem;
-  right: 4rem;
-}
-
-.container {
-  width: 22.8rem;
-  height: 22.8rem;
-}
-
 .timer {
+  font-size: 8.8rem;
+  line-height: 10.3rem;
   margin-bottom: 1.6rem;
 }
 
-h1 {
-  font-size: 8.8rem;
-  line-height: 10.3rem;
-}
-
-.controller {
+.controls {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 3.2rem;
-  background-color: var(--bg-timer);
+  background-color: var(--bg-controls);
 
   padding: 2.2rem 4rem;
   border-radius: 9999px;
+}
+
+.play svg path,
+.pause svg path,
+.sound-on svg path {
+  fill: var(--bnt-primary);
+}
+
+footer {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
 }
